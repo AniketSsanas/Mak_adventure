@@ -23,7 +23,7 @@ const CampingBookingModal = ({ isOpen, onClose, campingProduct }) => {
     setIsLoading(true);
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL || 'http://192.168.1.9:5000'}/api/send-email`, {
+      const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
