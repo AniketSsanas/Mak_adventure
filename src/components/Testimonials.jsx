@@ -5,23 +5,9 @@ import sand from '../assets/images/IMG_20240714_131512253.jpg'
 import ganesh from '../assets/images/IMG_20240714_121012813_MF_PORTRAIT.jpg'
 import akash from '../assets/images/IMG_20240714_132204917.jpg'
 
-
 const Testimonials = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentReview, setCurrentReview] = useState(0);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 500);
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentReview((prev) => (prev + 1) % reviews.length);
-    }, 4000); // Change review every 4 seconds
-
-    return () => clearInterval(interval);
-  }, [reviews.length]);
 
   const reviews = [
     {
@@ -73,6 +59,19 @@ const Testimonials = () => {
       avatar: sand
     }
   ];
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentReview((prev) => (prev + 1) % reviews.length);
+    }, 4000); // Change review every 4 seconds
+
+    return () => clearInterval(interval);
+  }, []);
 
   const renderStars = (rating) => {
     return Array.from({ length: 5 }, (_, i) => (
