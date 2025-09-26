@@ -90,7 +90,6 @@ const Hero = () => {
             className="book-button"
             onClick={handleBookClick}
             type="button"
-            role="button"
             tabIndex={0}
             aria-label="Start your adventure journey"
           >
@@ -110,7 +109,6 @@ const Hero = () => {
             className={`indicator ${index === currentImageIndex ? 'active' : ''}`}
             onClick={() => setCurrentImageIndex(index)}
             type="button"
-            role="button"
             tabIndex={0}
             aria-label={`View ${backgroundImages[index].title}`}
           >

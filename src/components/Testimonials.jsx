@@ -21,7 +21,7 @@ const Testimonials = () => {
     }, 4000); // Change review every 4 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [reviews.length]);
 
   const reviews = [
     {

@@ -3,18 +3,12 @@ import Logo from './Logo';
 import '../Logo.css';
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
   return (
     <header className="header">
       <div className="header-container">
         <Logo size="small" className="header-logo" />
 
-        <nav className={`nav-menu ${isMenuOpen ? 'nav-menu-open' : ''}`}>
+        <nav className="nav-menu">
           <a href="#home" className="nav-link">Home</a>
           <a href="#vehicles" className="nav-link">Vehicles</a>
           <a href="#adventures" className="nav-link">Adventures</a>
