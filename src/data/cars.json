@@ -1,0 +1,26 @@
+[
+  {
+    "img": "https://wallpaperaccess.com/full/3939234.jpg",
+    "name": "4x4 Adventure Jeep",
+    "desc": "Perfect for reaching remote hiking trails and mountain adventures.",
+    "icon": "🚙",
+    "price": "From $89/day",
+    "features": ["4WD", "Roof Rack", "GPS Navigation"]
+  },
+  {
+    "img": "https://wallpapers.com/images/hd/full-moon-red-thar-4k-hfk5vbgrykgzw2xc.jpg",
+    "name": "All-Terrain SUV",
+    "desc": "Comfort and power for long scenic drives to hiking destinations.",
+    "icon": "🚙",
+    "price": "From $129/day",
+    "features": ["Premium Interior", "Climate Control", "Entertainment System"]
+  },
+  {
+    "img": "https://wallpapercave.com/wp/wp6669217.jpg?w=1920&h=1080&fit=crop",
+    "name": "Trail Explorer Bike",
+    "desc": "Ride solo to hidden trails and adventure spots.",
+    "icon": "🚙",
+    "price": "From $59/day",
+    "features": ["Off-road Ready", "Lightweight", "Fuel Efficient"]
+  }
+]

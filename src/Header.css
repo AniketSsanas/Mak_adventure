@@ -1,0 +1,203 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 2px solid transparent;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.95) 100%);
+  background-clip: padding-box;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(85, 231, 255, 0.08);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px; /* Optimal height for logo */
+  gap: 2rem;
+}
+
+.header-logo {
+  flex-shrink: 0;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #374151;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, #55E7FF, #55E7FF);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(85, 231, 255, 0.3);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #55E7FF, #55E7FF);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 80%;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.book-now-header-btn {
+  background: linear-gradient(135deg, #55E7FF, #55E7FF, #55E7FF);
+  background-size: 200% 200%;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(85, 231, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.book-now-header-btn::before {
+  content: '';
+  margin-right: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.book-now-header-btn:hover {
+  background-position: right center;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(85, 231, 255, 0.5);
+  background: linear-gradient(135deg, #55E7FF, #55E7FF, #55E7FF);
+}
+
+.book-now-header-btn:active {
+  transform: translateY(0) scale(1.02);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0.75rem 1rem;
+    height: 70px; /* Slightly smaller on mobile */
+  }
+
+  .nav-menu {
+    display: flex; /* Show nav menu on mobile */
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(20px);
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.5rem;
+    box-shadow: 0 4px 20px rgba(85, 231, 255, 0.08);
+    gap: 0.5rem;
+  }
+
+  .nav-link {
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border: none;
+    font-size: 0.8rem;
+  }
+
+  .hamburger-btn {
+    display: flex;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 1001;
+  }
+
+  .hamburger-line {
+    width: 25px;
+    height: 3px;
+    background: #374151;
+    transition: all 0.3s ease;
+  }
+
+  .book-now-header-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Scroll effect */
+.header.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Theme Header Styles */
+[data-theme="dark"] .header {
+  background: rgba(15, 23, 42, 0.95);
+  box-shadow: 0 4px 20px rgba(85, 231, 255, 0.1);
+}
+
+[data-theme="dark"] .header.scrolled {
+  background: rgba(15, 23, 42, 0.98);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .nav-link {
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .nav-link:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, #55E7FF, #55E7FF);
+  box-shadow: 0 4px 12px rgba(85, 231, 255, 0.4);
+}
+
+[data-theme="dark"] .book-now-header-btn {
+  background: linear-gradient(135deg, #55E7FF, #55E7FF, #55E7FF);
+  color: #1f2937;
+  box-shadow: 0 4px 15px rgba(85, 231, 255, 0.5);
+}
+
+[data-theme="dark"] .book-now-header-btn:hover {
+  background: linear-gradient(135deg, #55E7FF, #55E7FF, #55E7FF);
+  box-shadow: 0 6px 20px rgba(85, 231, 255, 0.6);
+}

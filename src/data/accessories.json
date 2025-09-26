@@ -1,0 +1,42 @@
+[
+  {
+    "img": "https://images.unsplash.com/photo-1504851149312-7a075b496cc7?w=400&h=300&fit=crop",
+    "name": "Durable Camping Tent",
+    "desc": "Spacious and weather-resistant tent for comfortable camping.",
+    "icon": "⛺",
+    "price": "From $120",
+    "features": ["Waterproof", "Easy Setup", "Spacious"]
+  },
+  {
+    "img": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop",
+    "name": "Foldable Camping Chair",
+    "desc": "Lightweight and comfortable chair for outdoor relaxation.",
+    "icon": "🪑",
+    "price": "From $35",
+    "features": ["Foldable", "Comfortable", "Durable"]
+  },
+  {
+    "img": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
+    "name": "Portable Camping Table",
+    "desc": "Compact table perfect for meals and activities in the outdoors.",
+    "icon": "🍽️",
+    "price": "From $45",
+    "features": ["Foldable", "Stable", "Easy Carry"]
+  },
+  {
+    "img": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
+    "name": "Portable Camping Stove",
+    "desc": "Efficient stove for cooking delicious meals on your camping trips.",
+    "icon": "🔥",
+    "price": "From $80",
+    "features": ["Fuel Efficient", "Wind Resistant", "Compact"]
+  },
+  {
+    "img": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop",
+    "name": "Multi-Purpose Cooking Pot",
+    "desc": "Versatile pot set for all your cooking needs in the wilderness.",
+    "icon": "🍲",
+    "price": "From $25",
+    "features": ["Non-Stick", "Durable", "Stackable"]
+  }
+]

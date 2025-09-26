@@ -1,0 +1,200 @@
+.logo-container {
+  display: inline-block;
+  width: 65px;
+  height: 65px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  position: relative;
+  animation: logoFloat 4s ease-in-out infinite;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.logo-container:hover {
+  transform: scale(1.15) translateY(-3px);
+  filter: drop-shadow(0 8px 20px rgba(59, 130, 246, 0.5));
+}
+
+.gsm-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 8px;
+  animation: logoGlow 3s ease-in-out infinite;
+}
+
+.logo-container:hover .gsm-logo {
+  transform: scale(1.05);
+  filter: brightness(1.15) saturate(1.3) drop-shadow(0 0 15px rgba(59, 130, 246, 0.6));
+  animation: logoGlow 1.5s ease-in-out infinite;
+}
+
+/* Floating animation for the entire logo */
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-2px) rotate(1deg);
+  }
+  50% {
+    transform: translateY(-4px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-2px) rotate(-1deg);
+  }
+}
+
+/* Logo glow animation for image */
+@keyframes logoGlow {
+  0%, 100% {
+    filter: brightness(1) saturate(1);
+  }
+  50% {
+    filter: brightness(1.1) saturate(1.2);
+  }
+}
+
+/* Animation applied to logo container */
+
+/* Adventure elements animations */
+@keyframes tireRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes compassRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes starTwinkle {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3) rotate(180deg);
+  }
+}
+
+@keyframes mountainGlow {
+  0%, 100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes trailFlow {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 10;
+  }
+}
+
+/* Always running animations - not just on hover */
+.logo-container .gsm-logo circle[stroke="#f59e0b"] {
+  animation: tireRotate 2s linear infinite;
+}
+
+.logo-container .gsm-logo path[fill="#f59e0b"] {
+  animation: compassRotate 3s linear infinite;
+}
+
+.logo-container .gsm-logo circle[fill="#fbbf24"] {
+  animation: starTwinkle 2s ease-in-out infinite;
+}
+
+.logo-container .gsm-logo path[fill="url(#mountainGradient)"] {
+  animation: mountainGlow 4s ease-in-out infinite;
+}
+
+.logo-container .gsm-logo path[stroke="#10b981"] {
+  animation: trailFlow 2s linear infinite;
+}
+
+/* Enhanced hover effects with staggered animations */
+.logo-container:hover {
+  transform: scale(1.2) translateY(-4px);
+}
+
+.logo-container:hover .gsm-logo {
+  filter: brightness(1.2) saturate(1.4) drop-shadow(0 0 20px rgba(245, 158, 11, 0.4));
+}
+
+/* Pulse effect for adventure elements */
+@keyframes adventurePulse {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.15) rotate(5deg);
+  }
+}
+
+.logo-container:hover .gsm-logo g[transform="translate(25, 25)"] {
+  animation: adventurePulse 1.5s ease-in-out infinite;
+}
+
+/* Navigation-specific optimizations */
+.header-logo .logo-container {
+  animation-duration: 5s; /* Slower, more subtle animation in nav */
+}
+
+.header-logo .logo-container:hover {
+  transform: scale(1.1) translateY(-2px); /* Less dramatic in nav */
+  filter: drop-shadow(0 4px 12px rgba(59, 130, 246, 0.3));
+}
+
+/* Responsive logo sizes */
+@media (max-width: 768px) {
+  .logo-container {
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+  }
+
+  .logo-container:hover {
+    transform: scale(1.1) translateY(-2px);
+  }
+}
+
+/* Dark Theme Logo Styles */
+[data-theme="dark"] .logo-container {
+  filter: drop-shadow(0 4px 15px rgba(85, 231, 255, 0.3));
+}
+
+[data-theme="dark"] .logo-container:hover {
+  filter: drop-shadow(0 8px 25px rgba(85, 231, 255, 0.6));
+}
+
+[data-theme="dark"] .logo-container:hover .gsm-logo {
+  filter: brightness(1.3) saturate(1.5) drop-shadow(0 0 20px rgba(85, 231, 255, 0.8));
+}
+
+/* Light Theme Logo Styles */
+[data-theme="light"] .logo-container {
+  filter: drop-shadow(0 4px 15px rgba(229, 81, 0, 0.2));
+}
+
+[data-theme="light"] .logo-container:hover {
+  filter: drop-shadow(0 8px 25px rgba(229, 81, 0, 0.4));
+}
+
+[data-theme="light"] .logo-container:hover .gsm-logo {
+  filter: brightness(1.2) saturate(1.3) drop-shadow(0 0 20px rgba(229, 81, 0, 0.6));
+}

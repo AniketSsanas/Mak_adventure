@@ -1,0 +1,33 @@
+.whatsapp-floating-button {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10000;
+  outline: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out;
+  animation: bubble 2s infinite;
+}
+
+.whatsapp-floating-button:hover {
+  transform: scale(1.1);
+  animation-play-state: paused;
+}
+
+.whatsapp-icon {
+  width: 48px;
+  height: 48px;
+  filter: drop-shadow(0 0 2px rgba(0,0,0,0.3));
+}
+
+@keyframes bubble {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
